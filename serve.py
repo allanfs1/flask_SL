@@ -93,7 +93,7 @@ def forms(hashAdmin):
 
 
 
-
+#Operação de soma
 @app.route('/vs1/soma')
 def soma():
     a =0
