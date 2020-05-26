@@ -93,7 +93,9 @@ def forms(hashAdmin):
 
 
 
-#Operação de soma Operador * operando = obs não tem um exemplo
+<<<<<<< HEAD
+#Operação de soma Operador * operando exemplo: fx = (n-1) * (n)
+>>>>>>> bc67d3955414ba9f2979348227b51073d90effea
 @app.route('/vs1/soma')
 def soma():
     a =0
