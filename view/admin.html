@@ -1,0 +1,49 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>ADM</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.33" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/admin.css') }}">
+</head>
+
+<body>
+   {% block conteudo %}
+   <div class="container-fluid">
+     <div class="row">
+      <div class="col-lg-3">
+      <form action=""  class="form-signin" method="POST">
+        <h2 class="form-signin-heading">Login {{admin}}<h2>
+        
+        <label class="sr-only">Email address</label>
+        <input type="text" style="width:830px;" name="admin" class="form-control" placeholder="exemplo:user" required autofocus>
+        
+        <label class="sr-only">Password</label>
+        <input type="password" style="width:830px;" name="senha" class="form-control" placeholder="Password" required>
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"  value="remember-me"> <h5>Relembre sua senha</h5>
+          </label>
+        </div>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">ok</button>
+      </form>
+
+      </div>
+     </div>
+     
+  <div class="alert alert-danger" role="alert">
+  <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{erro}}
+ </div>
+ 
+</div> <!-- /container -->
+{% endblock %}
+	
+</body>
+
+</html>

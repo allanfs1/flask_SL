@@ -1,0 +1,86 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Administrador</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.33" />
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/lg.css') }}">
+</head>
+
+
+<body style="width:400px;" > 
+  
+{% extends "corpo.html" %}
+
+
+{% block conteudo %}
+
+<div class="container-fluid">
+     <div class="row">
+      <div class="col-lg-3">
+      <form action=""  class="form-signin" method="POST">
+        <h2 class="form-signin-heading">Login Proteus </h2>
+        
+        <label class="sr-only">Email address</label>
+        <input type="email"   style="width:380px;" name="email" class="form-control" placeholder="Email" required autofocus>
+        
+        <label class="sr-only">Password</label>
+        <input type="password" style="width:380px;"  name="senha" class="form-control" placeholder="Password" required>
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"  value="remember-me"> Relembre sua senha
+          </label>
+        </div>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">ok</button>
+      </form>
+
+       <a href="{{ url_for('info_proteus',hashAdmin= hashOne) }}">info</a>
+      </div>
+     </div>
+     
+<div class="alert alert-danger" role="alert">
+  <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{erro}}
+</div>
+
+</div> <!-- /container -->
+{% endblock %}
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+</body>
+
+
+</html>
+
+<!--
+
+
+<h1>ola mundo {{titulo}}</h1>
+{% if trava  %}
+  <p> Trava verdadeira<p>
+{% else %}
+  <p> Trava falsa<p>
+{% endif%}
+
+{%for pessoa in  usuario %}
+<ul>
+  <li> Nome:{{pessoa.nome}}  </li>
+  <li> Data:{{pessoa.data}}  </li>
+  <li> Sexo:{{pessoa.sexo}}  </li>
+  <li> Senha:{{pessoa.senha}} </li>
+</ul>
+{% endfor %}
+
+
+-->

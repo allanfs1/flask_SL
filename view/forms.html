@@ -1,0 +1,86 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Administrador</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.33" />
+        <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/forms.css') }}">
+</head>
+
+<body>
+
+
+<div class="container-fluid">
+        
+ <div class="col-lg-12">       
+<div class="panel panel-default">
+        
+  <div class="panel panel-heading">    
+    <label for="inputEmail"><h3>Configurações do Sistema</h3></label>  
+ </div>
+ 
+
+<div class="panel-body">
+        
+<div class="col-lg-12">         
+ <div class="input-group input-group-lg">
+  <label>Consultas</label>
+  <input style="width:830px" type="number" id="inputPassword" class="form-control" placeholder="Exemplo:23" required>
+  </div>
+ </div>
+
+<div class="col-lg-12">  
+ <div class="input-group input-group-lg">
+  <label>Link</label>
+  <input type="text" style="width:830px" class="form-control" placeholder="https://www.exemplo.com.br" required autofocus>
+ </div>
+</div>
+  
+
+<div class="col-lg-12">  
+ <div class="input-group input-group-lg">
+  <label>Programar Data</label>
+  <input type="date" style="width:830px" class="form-control" required autofocus>
+ </div>
+</div>
+  
+
+<div class="col-lg-12">  
+ <div class="input-group input-group-lg">
+  <label>Atividade</label>
+  <input type="text" style="width:830px"  class="form-control"  placeholder="Exemplo:18:00 horas" required autofocus>
+ </div>
+</div>
+  
+      
+
+<div class="col-lg-12">    
+ <div class="input-group input-group-lg">
+  <label>Password</label>
+  <input type="password" id="inputPassword" style="width:830px"  class="form-control" placeholder="Password" required>
+</div>
+</div>
+
+
+   <input style="margin:20px 0px 0px 20px;padding-left:10px;" type="submit" id="submit" class="btn btn-primary" value="Gravar" required>
+   <a style="margin-left:800px" href="{{ url_for('index',hashon=hashOne) }}"> voltar</a>
+   <div class="panel-footer">
+           <div class="alert alert-info" role="alert">Informação</div>
+   </div>
+   
+    
+  </div>
+ </div>
+ </div>
+  
+  
+</div>
+   
+ </body>
+</html>
