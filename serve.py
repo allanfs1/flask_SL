@@ -93,7 +93,7 @@ def forms(hashAdmin):
 
 
 
-#Operação de soma Operador * operando
+#Operação de soma Operador * operando = obs não tem um exemplo
 @app.route('/vs1/soma')
 def soma():
     a =0
