@@ -94,14 +94,6 @@ def forms(hashAdmin):
 
 
 
-@app.route('/vs1/soma')
-def soma():
-    a =0
-    b = 0
-    if request.method == 'GET':
-        a = int(request.args["a"])
-        b = int(request.args["b"])
-    return redirect("http://localhost:5000/info/{0}".format(a*b), code=302)
     
 
 @app.route('/info/<obj>')
